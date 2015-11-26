@@ -1,0 +1,24 @@
+{
+  "name": "datasphere_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leviross/datasphere_challenge.git"
+  },
+  "author": "Levi Ross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leviross/datasphere_challenge/issues"
+  },
+  "homepage": "https://github.com/leviross/datasphere_challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.3"
+  }
+}

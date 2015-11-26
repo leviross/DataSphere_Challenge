@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1">
+			<h1>Coupons & Deals near You</h1>
+			<h3>+3,600 MATCHES FOUND</h3>
+		</div>
+	</div>	
+
+	<div class="row">
+		<div ng-repeat="store in Stores" class="col-xs-10 col-xs-offset-1 outer-div">
+			<div style="padding:7px 0px 60px 0px;">
+				<div class="col-xs-1 col-xs-offset-1">
+					<img class="pinImg" src="http://content.secondspace.com/frontend-test/pin.png">
+				</div>
+				<div class="col-xs-5">
+					<h4 class="myFont"><b>{{store.city}}, {{store.state}}</b></h4>
+				</div>	
+				<div class="col-xs-3 col-xs-offset-2">
+					<h4 class="myFont">{{store.distance}} Mi</h4>
+				</div>
+			</div>
+				
+			<div class="col-xs-12" >
+				<img ng-show="$index == 0 || $index == 3 || $index == 6 || $index == 9" style="width:100%;" src="http://content.secondspace.com/frontend-test/tile1-main.jpg">
+				<img ng-show="$index == 1 || $index == 4 || $index == 7 || $index == 10" style="width:100%;" src="http://content.secondspace.com/frontend-test/tile2-main.jpg">
+				<img ng-show="$index == 2 || $index == 5 || $index == 8" style="width:100%;" src="http://content.secondspace.com/frontend-test/tile3-main.jpg">
+			</div>
+
+			<div class="col-xs-3 col-xs-offset-1" style="height:100px;">
+				<img ng-show="$index == 0 || $index == 3 || $index == 6 || $index == 9" class="tileImg" src="http://content.secondspace.com/frontend-test/tile1-logo.jpg">
+				<img ng-show="$index == 1 || $index == 4 || $index == 7 || $index == 10" class="tileImg" src="http://content.secondspace.com/frontend-test/tile2-logo.jpg">
+				<img ng-show="$index == 2 || $index == 5 || $index == 8" class="tileImg" src="http://content.secondspace.com/frontend-test/tile3-logo.jpg">
+			</div>
+			<div class="col-xs-6 col-xs-offset-1">
+				<h2><b>{{store.category}}</b></h2>
+			</div>
+			<div class="blue-div col-xs-10 col-xs-offset-1">
+				<p class="titleP">{{store.businessname}}</p>
+			</div><br />
+			<div ng-repeat="coupon in store.coupons|limitTo:2" class="my-line col-xs-10 col-xs-offset-1">
+				<p class="dealP">{{coupon.title}}</p>
+			</div>
+
+			<div ng-show="store.coupons.length > 2" class="my-line col-xs-10 col-xs-offset-1">
+				<p class="showAll">See All {{store.coupons.length}}</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
