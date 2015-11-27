@@ -38,7 +38,7 @@
 				<p class="titleP">{{store.businessname}}</p>
 			</div><br />
 			<div ng-repeat="coupon in store.coupons|limitTo:2" class="my-line col-xs-10 col-xs-offset-1">
-				<p class="dealP">{{coupon.title}}</p>
+				<p class="col-xs-9 dealP">{{coupon.title}}</p>
 			</div>
 
 			<div ng-show="store.coupons.length > 2" class="my-line col-xs-10 col-xs-offset-1">
